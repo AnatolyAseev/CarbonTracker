@@ -1,8 +1,8 @@
 """This python script consists of Frac class, which gets variables and constatnts of fracking components and estimates
 CO2 emissions from one frack job. Currently available frack components for calculating overall emissions are:
 
-primeMover - emissiond associated with machinery that takes care of job on the site, e.g. pumps, blenders, etc.
-sandMining - emissions associated with sand mining and delivering (cope 3 sand for contractors)
+primeMover - emissions associated with machinery that takes care of job on the site, e.g. pumps, blenders, etc.
+sandMining - emissions associated with sand mining and delivering (scope 3 sand for contractors)
 materialTransport - emissions associated with Water, Sand and Fuel transportation. They are different methods here
 mobDemob - emissions associated with mobilization and demobilization of all the machinery and trucks
 people - emissions associated with onsite workers .
@@ -21,8 +21,10 @@ class Frac:
         frac_type - type of the fracking. List of strings ['conv', 'zip', 'sim']. Currently not used
         num_stage - number of stages. Integer
         stage_time - stage duration in min. Integer
-        p  - bottomho;e pressure, psi
+        p  - bottomhole pressure, psi
         q - rate of pumping, barrel/min
+        t_tanks - number of trucks
+        t_pumps - number of pumps
         etta - pump efficiency, default is 0.9
 
        """
@@ -98,7 +100,6 @@ class Frac:
         tbs - in minutes
 
         Return:
-        num_pumps - number of pumps estimate
         total_primeMover_CO2 - CO2 emitted by Prime Movers, kg """
 
 
@@ -158,7 +159,7 @@ class Frac:
 
         return total_waterTransport_CO2
 
-    def fuelTransport(self, fuel_per_hour, fuel_load, dist_to_fuel, truck_consumption):
+    def fuelTransport(self, fuel_load, dist_to_fuel, truck_consumption):
         """Calculates emissions associated with fuel transportation with the assumption of the diesel trucks.
 
         Arguments:
@@ -199,7 +200,7 @@ class Frac:
         return total_mobDemob_CO2
 
     def land(self):
-        """We estimate land disturbance CO2 from coeeficients from OPGEE. Since we have only one well, we use the
+        """We estimate land disturbance CO2 from coefficients from OPGEE. Since we have only one well, we use the
         smallest coefficient even if we have high carbon environment (like forest).
         We convert cumulative oil production from one well to mega jouls and then
 
