@@ -1,0 +1,14 @@
+1. Doublecheck and justify all the constants and coefficients!
+2. What about cng, elect constants?
+3. Other frac_type calculations
+4. Do we convert CH4 and N2O to CO2?
+5. Remind why number 2250 is in pump estimate
+6. TBS is not being used
+7. We include sand mining - Scope 3 for sand. What about scope 3 for water and fuel? i.e. how much CO2 emitted to produce
+1 cubic meter of consumed diesel?
+8. add lng, cng to material transportation
+9. Do we need to double mobilization emissions? I mean account for demobilization too.
+10. Can mobilization constants vary? I added number of trucks (tanks) and number of pumps as variables
+11. We need to add people and auxillary emissions!
+12. Land can be broadened. I used only small coefficients. Like no variables so far
+13. Land should be revised
