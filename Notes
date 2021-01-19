@@ -12,3 +12,7 @@
 11. We need to add people and auxillary emissions!
 12. Land can be broadened. I used only small coefficients. Like no variables so far
 13. Land should be revised
+
+MONTE CARLO:
+1. Revise all the variables. They all have to be independent. Carefully revise range of distribution!
+2. Revise type of distribution! Uniform is not the best in many cases if the likelihood is close to the mean value

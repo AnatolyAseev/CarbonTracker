@@ -163,7 +163,6 @@ class Frac:
         """Calculates emissions associated with fuel transportation with the assumption of the diesel trucks.
 
         Arguments:
-        fuel_per_hour  - fuel consumption per hour, .
         fuel_load -  fuel load, cubic meters.
         dist_to_fuel - distance to fuel source, mile
         truck_consumption - average fuel consumption
