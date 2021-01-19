@@ -233,6 +233,6 @@ class Frac:
         """No calculations so far"""
         return 6000
 
-    def auxillary(self):
+    def auxillary(self):git psh
         """No calculations so far"""
         return 25000
